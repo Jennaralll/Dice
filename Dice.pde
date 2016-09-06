@@ -5,6 +5,7 @@ void setup()
 void draw()
 {
 	//your code here
+	Die.show();
 }
 void mousePressed()
 {
