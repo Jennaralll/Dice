@@ -35,31 +35,64 @@ class Die //models one single dice cube
 		//your code here
 		int diceSize = 25; 
 		int spotSize = 15;
-		num = (int)(Math.random()*4);
+		num = (int)(Math.random()*6)+1;
 		if (num  == 1)
 		{
-			fill(0, 0, 255);
+			fill(0);
 			ellipse(myX + 38, myY + 35, spotSize, spotSize);
 		}
 		else if (num == 2)
 		{
-			fill(0, 0, 255);
-			ellipse(myX + 30, myY + 30, spotSize, spotSize);
-			ellipse(myX + 50, myY + 50, spotSize, spotSize);
+			fill(0);
+			ellipse(myX + 20, myY + 20, spotSize, spotSize);
+			ellipse(myX + 60, myY + 60, spotSize, spotSize);
 		}
 		else if (num == 3)
 		{
-			fill(0, 0, 255); 
+			fill(0); 
 			ellipse(myX + 20, myY + 20, spotSize, spotSize);
 			ellipse(myX + 40, myY + 40, spotSize, spotSize);
 			ellipse(myX + 60, myY + 60, spotSize, spotSize);
 		}
+		else if (num == 4)
+		{
+			fill(0); 
+			ellipse(myX + 20, myY + 20, spotSize, spotSize);
+			ellipse(myX + 60, myY + 20, spotSize, spotSize);
+			ellipse(myX + 20, myY + 60, spotSize, spotSize);
+			ellipse(myX + 60, myY + 60, spotSize, spotSize);
+		}
+		else if (num == 5)
+		{
+			fill(0);
+			ellipse(myX + 20, myY + 20, spotSize, spotSize);
+			ellipse(myX + 60, myY + 20, spotSize, spotSize);
+			ellipse(myX + 40, myY + 40, spotSize, spotSize);
+			ellipse(myX + 20, myY + 60, spotSize, spotSize);
+			ellipse(myX + 60, myY + 60, spotSize, spotSize);
+		}
+		else if (num == 6)
+		{
+			fill(0);
+			ellipse(myX + 20, myY + 20, spotSize, spotSize);
+			ellipse(myX + 20, myY + 40, spotSize, spotSize);
+			ellipse(myX + 20, myY + 60, spotSize, spotSize);
+			ellipse(myX + 60, myY + 20, spotSize, spotSize);
+			ellipse(myX + 60, myY + 40, spotSize, spotSize);
+			ellipse(myX + 60, myY + 60, spotSize, spotSize);
+		}
+
 	}
 	void show()
 	{
-		int diceSize = 25; 
-		fill(255);
-		rect(myX, myY, diceSize+50, diceSize+50);
+		for (int myY = 50; myY <= 450; myY += 50)
+		{
+	
+		  int diceSize = 25; 
+	      fill(255);
+		  rect(myX, myY, diceSize+50, diceSize+50);
+		    
+		}
 
 		//your code here
 	}
