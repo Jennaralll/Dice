@@ -1,4 +1,6 @@
 int num;
+int total = 0; 
+
 void setup()
 {
 	
@@ -9,9 +11,18 @@ void setup()
 void draw()
 {
 	//your code here
-	Die one = new Die(250, 250);
-	one.show();
-	one.roll();
+	for (int y = 100; y <= 400; y += 100)
+	{
+		for (int x = 50; x <= 370; x += 80)
+		{
+		  Die one = new Die(x, y);
+          one.show();
+	      one.roll();
+	      total = total + num;
+
+		}
+	}
+	
 
 }
 void mousePressed()
@@ -33,7 +44,7 @@ class Die //models one single dice cube
 	void roll()
 	{
 		//your code here
-		int diceSize = 25; 
+		int diceSize = 30; 
 		int spotSize = 15;
 		num = (int)(Math.random()*6)+1;
 		if (num  == 1)
@@ -85,14 +96,11 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		for (int myY = 50; myY <= 450; myY += 50)
-		{
-	
 		  int diceSize = 25; 
 	      fill(255);
 		  rect(myX, myY, diceSize+50, diceSize+50);
 		    
-		}
+		
 
 		//your code here
 	}
