@@ -1,6 +1,7 @@
+
 int num;
 int total = 0; 
-
+int reRoll; 
 void setup()
 {
 	
@@ -10,7 +11,11 @@ void setup()
 }
 void draw()
 {
-	//your code here
+	background(0);
+	fill(255);
+	textSize(20);
+	text("Total: " + total, 50, 50);
+	text("Number of Rolls: " + reRoll, 230, 50);
 	for (int y = 100; y <= 400; y += 100)
 	{
 		for (int x = 50; x <= 370; x += 80)
@@ -27,9 +32,9 @@ void draw()
 }
 void mousePressed()
 {
-
 	background(0);
 	redraw();
+	reRoll += 1; 
 }
 class Die //models one single dice cube
 {
