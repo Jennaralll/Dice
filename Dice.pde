@@ -1,7 +1,6 @@
 
 int num;
-int total = 0; 
-int reRoll; 
+int total;
 void setup()
 {
 	
@@ -30,11 +29,13 @@ void draw()
 	
 
 }
+
+int reRoll = 1;
 void mousePressed()
 {
+	reRoll += 1; 
 	background(0);
 	redraw();
-	reRoll += 1; 
 }
 class Die //models one single dice cube
 {
