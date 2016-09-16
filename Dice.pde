@@ -1,9 +1,14 @@
 
 int num;
 int total;
+import java.util.Random;
+Random rand = new Random();
+int r = rand.nextInt();
+int g = rand.nextInt();
+int b = rand.nextInt();
+
 void setup()
 {
-	
 	background(0);
 	size(500, 500);
 	noLoop();
@@ -19,15 +24,13 @@ void draw()
 	{
 		for (int x = 50; x <= 370; x += 80)
 		{
+		  fill(r, g, b);
 		  Die one = new Die(x, y);
           one.show();
 	      one.roll();
 	      total = total + num;
-
 		}
 	}
-	
-
 }
 
 int reRoll = 1;
@@ -43,6 +46,10 @@ class Die //models one single dice cube
 	int myX, myY;
 	Die(int x, int y) //constructor
 	{
+		// Random rand = new Random();
+		// int r = rand.nextInt();
+		// int g = rand.nextInt();
+		// int b = rand.nextInt();
 		myX = x;
 		myY= y;
 		//variable initializations here
