@@ -1,11 +1,6 @@
 
 int num;
 int total;
-import java.util.Random;
-Random rand = new Random();
-int r = rand.nextInt();
-int g = rand.nextInt();
-int b = rand.nextInt();
 
 void setup()
 {
@@ -24,7 +19,6 @@ void draw()
 	{
 		for (int x = 50; x <= 370; x += 80)
 		{
-		  fill(r, g, b);
 		  Die one = new Die(x, y);
           one.show();
 	      one.roll();
